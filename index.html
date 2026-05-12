@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shoto — Bearded Dragon Care Command Center</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <meta property="og:title" content="Shoto — Bearded Dragon Care Command Center" />
+  <meta property="og:description" content="Half Fire. Half Ice. Full Care." />
+  <meta property="og:image" content="hero.png" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <img src="favicon.png" alt="Shoto" class="sidebar-favicon" />
+      <div>
+        <span class="brand-name">SHOTO</span>
+        <span class="brand-sub">Care Command Center</span>
+      </div>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="#dashboard" class="snav active"><span>🏠</span> Dashboard</a>
+      <a href="#today"     class="snav"><span>⭐</span> Today's Care</a>
+      <a href="#weekly"    class="snav"><span>📅</span> Weekly Calendar</a>
+      <a href="#monthly"   class="snav"><span>🔧</span> Monthly Maintenance</a>
+      <a href="#shopping"  class="snav"><span>🛒</span> Shopping List</a>
+      <a href="#supplements" class="snav"><span>💊</span> Supplements</a>
+      <a href="#soak"      class="snav"><span>🛁</span> Soak Tracker</a>
+      <a href="#weight"    class="snav"><span>⚖️</span> Weight Log</a>
+      <a href="#emergency" class="snav"><span>🚨</span> Emergency Guide</a>
+      <a href="#notes"     class="snav"><span>📝</span> Family Notes</a>
+    </nav>
+    <div class="sidebar-portrait">
+      <img src="portrait.png" alt="Shoto" class="portrait-img" />
+      <p class="portrait-quote">Half Fire.<br>Half Ice.<br><em>All Dragon.</em></p>
+    </div>
+  </aside>
+
+  <!-- MOBILE HEADER -->
+  <header class="mobile-header">
+    <button class="hamburger" id="hamburger">☰</button>
+    <span class="mobile-title"><img src="favicon.png" class="mobile-favicon" alt=""/> Shoto</span>
+  </header>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <main class="main-content">
+
+    <!-- HERO -->
+    <section id="dashboard" class="hero-section">
+      <img src="hero.png" alt="Shoto — Half Fire Half Ice" class="hero-img" />
+      <div class="hero-overlay">
+
+        <!-- ANIME TITLE CARD -->
+        <div class="hero-title-block">
+          <div class="shoto-title">
+            <span class="shoto-fire">SHO</span><span class="shoto-divider">|</span><span class="shoto-ice">TO</span>
+          </div>
+          <div class="shoto-japanese">半火 · 半氷</div>
+          <div class="shoto-sub">HALF FIRE · HALF ICE</div>
+          <div class="hero-divider-line"></div>
+          <div class="hero-greeting" id="heroGreeting">Good morning!</div>
+          <div class="hero-tagline">Consistency is the key to a healthy dragon.</div>
+        </div>
+
+        <!-- PROGRESS CARD -->
+        <div class="hero-progress">
+          <div class="pc-label">⭐ TODAY'S PROGRESS</div>
+          <div class="pc-bar-bg"><div class="pc-bar-fill" id="heroBar"></div></div>
+          <div class="pc-foot">
+            <span id="heroPct">0% Complete</span>
+            <span id="heroCount">0 of 10 tasks</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- INTRO STRIP -->
+    <div class="intro-strip">
+      <div class="intro-left">
+        <div class="intro-japanese">半火 · 半氷 · 龍</div>
+        <div class="intro-divider"></div>
+        <blockquote class="intro-quote">
+          "Born from the sunbaked deserts of central Australia,<br>
+          where fire meets frost at dusk —<br>
+          he chose a side of each."
+        </blockquote>
+        <div class="intro-divider"></div>
+        <div class="intro-lore">
+          <div class="lore-item">
+            <span class="lore-label">Species</span>
+            <span class="lore-value">Pogona vitticeps</span>
+          </div>
+          <div class="lore-item">
+            <span class="lore-label">Origin</span>
+            <span class="lore-value">Central Australia</span>
+          </div>
+          <div class="lore-item">
+            <span class="lore-label">Age</span>
+            <span class="lore-value">8 Months</span>
+          </div>
+          <div class="lore-item">
+            <span class="lore-label">Class</span>
+            <span class="lore-value">Fire · Ice Morph</span>
+          </div>
+          <div class="lore-item">
+            <span class="lore-label">Rank</span>
+            <span class="lore-value">Dragon of the House</span>
+          </div>
+        </div>
+      </div>
+      <div class="intro-right">
+        <div class="intro-stat-card fire-stat">
+          <div class="stat-icon">🔥</div>
+          <div class="stat-label">Basking Side</div>
+          <div class="stat-value">100–105°F</div>
+          <div class="stat-sub">His throne of fire</div>
+        </div>
+        <div class="intro-stat-card ice-stat">
+          <div class="stat-icon">❄️</div>
+          <div class="stat-label">Cool Side</div>
+          <div class="stat-value">75–82°F</div>
+          <div class="stat-sub">His kingdom of ice</div>
+        </div>
+        <div class="intro-stat-card neutral-stat">
+          <div class="stat-icon">☀️</div>
+          <div class="stat-label">UVB Light</div>
+          <div class="stat-value">12–14 hrs</div>
+          <div class="stat-sub">Daily light cycle</div>
+        </div>
+        <div class="intro-stat-card neutral-stat">
+          <div class="stat-icon">⚖️</div>
+          <div class="stat-label">Target Weight</div>
+          <div class="stat-value">300–400g</div>
+          <div class="stat-sub">Age 8 months</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TODAY CARD -->
+    <section id="today" class="card fire-card">
+      <div class="card-head">
+        <div class="head-icon fire-icon">⭐</div>
+        <div>
+          <h2 id="todayTitle">Today's Care</h2>
+          <p id="todayDate"></p>
+        </div>
+        <button class="print-btn" onclick="printToday()">🖨️ Print Today</button>
+      </div>
+
+      <!-- Today Day Details -->
+      <div class="today-grid" id="todayGrid"></div>
+
+      <!-- Morning Checklist -->
+      <div class="today-checklist-wrap">
+        <h3 class="sub-heading fire-text">☀️ Morning Checklist</h3>
+        <div class="morning-grid" id="morningChecklist">
+          <label class="chk" data-key="m0"><input type="checkbox"/><span class="chkbox"></span><span class="chklbl"><strong>Lights On</strong>Turn on basking + UVB lights</span></label>
+          <label class="chk" data-key="m1"><input type="checkbox"/><span class="chkbox"></span><span class="chklbl"><strong>Basking Temp</strong>Verify 100–105°F at basking spot</span></label>
+          <label class="chk" data-key="m2"><input type="checkbox"/><span class="chkbox"></span><span class="chklbl"><strong>Cool Side Temp</strong>Verify 75–82°F on cool side</span></label>
+          <label class="chk" data-key="m3"><input type="checkbox"/><span class="chkbox"></span><span class="chklbl"><strong>Fresh Water</strong>Refresh &amp; clean water dish</span></label>
+          <label class="chk" data-key="m4"><input type="checkbox"/><span class="chkbox"></span><span class="chklbl"><strong>Prepare Salad</strong>Chop and plate fresh salad mix</span></label>
+          <label class="chk" data-key="m5"><input type="checkbox"/><span class="chkbox"></span><span class="chklbl"><strong>Live Feeders</strong>Feed insects if scheduled today</span></label>
+          <label class="chk" data-key="m6"><input type="checkbox"/><span class="chkbox"></span><span class="chklbl"><strong>Dust Supplements</strong>Apply correct supplement</span></label>
+          <label class="chk" data-key="m7"><input type="checkbox"/><span class="chkbox"></span><span class="chklbl"><strong>Remove Insects</strong>Clear uneaten insects after 15 min</span></label>
+          <label class="chk" data-key="m8"><input type="checkbox"/><span class="chkbox"></span><span class="chklbl"><strong>Spot Clean</strong>Spot clean any mess in enclosure</span></label>
+          <label class="chk" data-key="m9"><input type="checkbox"/><span class="chkbox"></span><span class="chklbl"><strong>Observe</strong>Check behavior, appetite &amp; poop</span></label>
+        </div>
+      </div>
+
+      <!-- Daily Notes -->
+      <div class="daily-notes-wrap">
+        <h3 class="sub-heading ice-text">📝 Today's Observations</h3>
+        <textarea class="daily-notes" id="dailyNotes" placeholder="Note anything unusual today — appetite, behavior, poop, shed signs, mood..."></textarea>
+        <button class="btn-save-notes" id="saveNotesBtn">💾 Save Notes</button>
+        <span class="notes-saved" id="notesSaved"></span>
+      </div>
+    </section>
+
+    <!-- WEEKLY CALENDAR -->
+    <section id="weekly" class="card">
+      <div class="card-head">
+        <div class="head-icon">📅</div>
+        <div>
+          <h2>Weekly Feeding &amp; Care Calendar</h2>
+          <p id="weekRange"></p>
+        </div>
+        <button class="btn-reset" id="resetWeekBtn">↺ Reset Week</button>
+      </div>
+      <div class="week-scroll">
+        <table class="week-table">
+          <thead id="weekHead"></thead>
+          <tbody id="weekBody"></tbody>
+        </table>
+      </div>
+      <div class="week-legend">
+        <span>🪲 Live Feeders</span><span>🥗 Salad</span>
+        <span>💊 Supplement</span><span>💧 Hydration</span><span>🔧 Care Task</span>
+      </div>
+    </section>
+
+    <!-- MONTHLY -->
+    <section id="monthly" class="card">
+      <button class="ctrigger" data-target="monthlyBody">
+        <div class="card-head" style="pointer-events:none;padding:0;margin:0">
+          <div class="head-icon">🔧</div>
+          <div><h2>Monthly Maintenance</h2><p>Big-picture upkeep tasks</p></div>
+        </div>
+        <span class="carr" id="monthlyArr">▾</span>
+      </button>
+      <div class="cbody" id="monthlyBody">
+        <div class="two-grid">
+          <label class="chk" data-key="mo0"><input type="checkbox"/><span class="chkbox"></span><span class="chklbl"><strong>Deep Clean Decor</strong>Scrub all hides, rocks, branches</span></label>
+          <label class="chk" data-key="mo1"><input type="checkbox"/><span class="chkbox"></span><span class="chklbl"><strong>Substrate Check</strong>Replace substrate if soiled or old</span></label>
+          <label class="chk" data-key="mo2"><input type="checkbox"/><span class="chkbox"></span><span class="chklbl"><strong>Sanitize Dishes</strong>Disinfect food &amp; water dishes</span></label>
+          <label class="chk" data-key="mo3"><input type="checkbox"/><span class="chkbox"></span><span class="chklbl"><strong>Weigh Shoto</strong>Record weight — healthy gain matters</span></label>
+          <label class="chk" data-key="mo4"><input type="checkbox"/><span class="chkbox"></span><span class="chklbl"><strong>UVB Bulb Check</strong>Inspect age &amp; output — replace every 6 months</span></label>
+          <label class="chk" data-key="mo5"><input type="checkbox"/><span class="chkbox"></span><span class="chklbl"><strong>Equipment Inspect</strong>Check all electrical &amp; heating gear</span></label>
+          <label class="chk" data-key="mo6"><input type="checkbox"/><span class="chkbox"></span><span class="chklbl"><strong>Reorder Supplies</strong>Restock feeders, greens, supplements</span></label>
+          <label class="chk" data-key="mo7"><input type="checkbox"/><span class="chkbox"></span><span class="chklbl"><strong>Nail Trim</strong>Trim nails if needed — reptile-safe clippers</span></label>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOPPING + SUPPLEMENTS -->
+    <div class="two-col" id="shopping">
+      <section class="card">
+        <button class="ctrigger" data-target="shoppingBody">
+          <div class="card-head" style="pointer-events:none;padding:0;margin:0">
+            <div class="head-icon">🛒</div>
+            <div><h2>Master Shopping List</h2><p>Check off as you pick up</p></div>
+          </div>
+          <span class="carr" id="shoppingArr">▾</span>
+        </button>
+        <div class="cbody" id="shoppingBody">
+          <div class="shop-cols">
+            <div>
+              <div class="shop-cat">🥬 Staple Greens</div>
+              <label class="chk sm" data-key="sh0"><input type="checkbox"/><span class="chkbox sm"></span><span class="chklbl sm">Collard Greens</span></label>
+              <label class="chk sm" data-key="sh1"><input type="checkbox"/><span class="chkbox sm"></span><span class="chklbl sm">Mustard Greens</span></label>
+              <label class="chk sm" data-key="sh2"><input type="checkbox"/><span class="chkbox sm"></span><span class="chklbl sm">Dandelion Greens</span></label>
+              <label class="chk sm" data-key="sh3"><input type="checkbox"/><span class="chkbox sm"></span><span class="chklbl sm">Turnip Greens</span></label>
+              <label class="chk sm" data-key="sh4"><input type="checkbox"/><span class="chkbox sm"></span><span class="chklbl sm">Endive</span></label>
+            </div>
+            <div>
+              <div class="shop-cat">🥕 Vegetables</div>
+              <label class="chk sm" data-key="sh5"><input type="checkbox"/><span class="chkbox sm"></span><span class="chklbl sm">Squash</span></label>
+              <label class="chk sm" data-key="sh6"><input type="checkbox"/><span class="chkbox sm"></span><span class="chklbl sm">Bell Pepper</span></label>
+              <label class="chk sm" data-key="sh7"><input type="checkbox"/><span class="chkbox sm"></span><span class="chklbl sm">Zucchini</span></label>
+              <label class="chk sm" data-key="sh8"><input type="checkbox"/><span class="chkbox sm"></span><span class="chklbl sm">Bok Choy</span></label>
+              <label class="chk sm" data-key="sh9"><input type="checkbox"/><span class="chkbox sm"></span><span class="chklbl sm">Prickly Pear</span></label>
+            </div>
+            <div>
+              <div class="shop-cat">🪲 Live Feeders</div>
+              <label class="chk sm" data-key="sh10"><input type="checkbox"/><span class="chkbox sm"></span><span class="chklbl sm">Dubia Roaches</span></label>
+              <label class="chk sm" data-key="sh11"><input type="checkbox"/><span class="chkbox sm"></span><span class="chklbl sm">Silkworms</span></label>
+              <label class="chk sm" data-key="sh12"><input type="checkbox"/><span class="chkbox sm"></span><span class="chklbl sm">Hornworms</span></label>
+              <label class="chk sm" data-key="sh13"><input type="checkbox"/><span class="chkbox sm"></span><span class="chklbl sm">Discoid Roaches</span></label>
+              <label class="chk sm" data-key="sh14"><input type="checkbox"/><span class="chkbox sm"></span><span class="chklbl sm">BSFL</span></label>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="supplements" class="card">
+        <div class="card-head">
+          <div class="head-icon">💊</div>
+          <div><h2>Supplements Owned</h2><p>Fully stocked — no need to purchase</p></div>
+        </div>
+        <div class="supp-list">
+          <div class="supp-row"><span class="supp-dot" style="background:#4CAF50"></span><div><strong>Repashy Calcium Plus LoD</strong><span>Mon · Wed · Fri — Calcium + D3</span></div></div>
+          <div class="supp-row"><span class="supp-dot" style="background:#E63925"></span><div><strong>Repashy SuperPig</strong><span>Thursday — Carotenoid pigment booster</span></div></div>
+          <div class="supp-row"><span class="supp-dot" style="background:#5DAEEE"></span><div><strong>Repashy SuperVite</strong><span>Sunday — Full multivitamin support</span></div></div>
+          <div class="supp-row"><span class="supp-dot" style="background:#FDC268"></span><div><strong>Bee Pollen Powder</strong><span>Tue · Sat — Natural appetite stimulant</span></div></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- SOAK TRACKER -->
+    <section id="soak" class="card ice-card">
+      <div class="card-head">
+        <div class="head-icon ice-icon">🛁</div>
+        <div><h2>Soak / Hydration Tracker</h2><p>Shoto should soak 2–3× per week · 10–15 min lukewarm water</p></div>
+      </div>
+      <div class="soak-grid" id="soakGrid"></div>
+      <div class="soak-tip">💧 Soak helps with hydration, digestion, and shedding. Never leave unsupervised.</div>
+    </section>
+
+    <!-- WEIGHT LOG -->
+    <section id="weight" class="card">
+      <div class="card-head">
+        <div class="head-icon">⚖️</div>
+        <div><h2>Weight &amp; Age Log</h2><p>Track Shoto's growth over time</p></div>
+      </div>
+      <div class="weight-wrap">
+        <div class="weight-input-row">
+          <input type="date" id="weightDate" class="w-input" />
+          <input type="number" id="weightVal" class="w-input" placeholder="Weight (grams)" step="0.1" />
+          <input type="text" id="weightNote" class="w-input w-wide" placeholder="Notes (e.g. after shed, good appetite)" />
+          <button class="btn-fire" id="addWeightBtn">+ Add Entry</button>
+        </div>
+        <div class="weight-table-wrap">
+          <table class="weight-table" id="weightTable">
+            <thead><tr><th>Date</th><th>Weight (g)</th><th>Notes</th><th></th></tr></thead>
+            <tbody id="weightBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- EMERGENCY -->
+    <section id="emergency" class="card emg-card">
+      <button class="ctrigger" data-target="emergencyBody">
+        <div class="card-head" style="pointer-events:none;padding:0;margin:0">
+          <div class="head-icon fire-icon">🚨</div>
+          <div><h2>Quick Emergency / Observation Guide</h2><p>What to watch for and how to respond</p></div>
+        </div>
+        <span class="carr" id="emergencyArr">▾</span>
+      </button>
+      <div class="cbody" id="emergencyBody">
+        <div class="emg-layout">
+          <ul class="emg-list">
+            <li><span class="tri">▲</span>No poop for several days + lethargic → review temps immediately</li>
+            <li><span class="tri">▲</span>Refusing food for 1–2 days can happen during shedding — monitor closely</li>
+            <li><span class="tri">▲</span>Wrinkled skin or sunken eyes = possible dehydration — soak immediately</li>
+            <li><span class="tri">▲</span>Always verify basking temperatures before changing diet or schedule</li>
+            <li><span class="tri">▲</span>Never leave feeder insects in enclosure overnight — they can bite</li>
+            <li><span class="tri">▲</span>Call vet if: lethargy 3+ days, no poop 7+ days, open-mouth breathing, dragging limbs</li>
+          </ul>
+          <img src="emergency.png" alt="Shoto" class="emg-img" />
+        </div>
+      </div>
+    </section>
+
+    <!-- FAMILY NOTES -->
+    <section id="notes" class="card notes-card">
+      <button class="ctrigger" data-target="notesBody">
+        <div class="card-head" style="pointer-events:none;padding:0;margin:0">
+          <div class="head-icon">📝</div>
+          <div><h2>Important Notes for Family</h2><p>Read before caring for Shoto</p></div>
+        </div>
+        <span class="carr" id="notesArr">▾</span>
+      </button>
+      <div class="cbody" id="notesBody">
+        <div class="notes-layout">
+          <ul class="notes-list">
+            <li><span class="star">★</span>Do NOT overuse supplements — follow the schedule exactly.</li>
+            <li><span class="star">★</span>Salads must be fresh every morning — never use leftovers.</li>
+            <li><span class="star">★</span>If unsure about feeding, give less — never overfeed worms.</li>
+            <li><span class="star">★</span>Most important daily checks: heat · UVB · hydration · appetite.</li>
+            <li><span class="star">★</span>Shoto's name means Half Fire, Half Ice — his enclosure reflects this!</li>
+            <li><span class="star">★</span>Keep this page bookmarked on your phone for quick reference.</li>
+          </ul>
+          <img src="notes.png" alt="Shoto" class="notes-img" />
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="page-footer">
+      <svg viewBox="0 0 800 60" class="cactus-svg" xmlns="http://www.w3.org/2000/svg">
+        <g fill="rgba(230,57,37,0.25)">
+          <rect x="40" y="8" width="10" height="50" rx="5"/>
+          <rect x="15" y="25" width="30" height="8" rx="4"/><rect x="14" y="17" width="8" height="22" rx="4"/>
+          <rect x="390" y="0" width="12" height="58" rx="6"/>
+          <rect x="358" y="18" width="36" height="9" rx="4"/><rect x="356" y="10" width="9" height="24" rx="4"/>
+          <rect x="408" y="15" width="34" height="9" rx="4"/><rect x="433" y="8" width="9" height="24" rx="4"/>
+          <rect x="700" y="12" width="10" height="46" rx="5"/>
+          <rect x="678" y="28" width="28" height="8" rx="4"/><rect x="677" y="21" width="8" height="20" rx="4"/>
+        </g>
+        <g fill="rgba(93,174,238,0.2)">
+          <rect x="80" y="20" width="8" height="38" rx="4"/>
+          <rect x="720" y="18" width="8" height="40" rx="4"/>
+          <rect x="200" y="15" width="6" height="43" rx="3"/>
+          <rect x="600" y="10" width="6" height="48" rx="3"/>
+        </g>
+      </svg>
+      <p class="footer-tip" id="dailyTip"></p>
+      <p class="footer-credit">🔥 Shoto — Half Fire. Half Ice. ❄️ &nbsp;·&nbsp; Bearded Dragon Care Command Center</p>
+    </footer>
+
+  </main>
+
+  <!-- PRINT OVERLAY -->
+  <div id="printOverlay" class="print-overlay" style="display:none">
+    <div class="print-sheet" id="printSheet"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
