@@ -1,6 +1,6 @@
 // ═══════════════════════════════════════
 //   YUZU — CARE COMMAND CENTER
-//   script.js v3 — Fixed checkboxes
+//   script.js v4 — Detailed feeding
 // ═══════════════════════════════════════
 
 const WEEK_DATA = [
